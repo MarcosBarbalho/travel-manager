@@ -123,4 +123,8 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+    'rate_limit' => [
+        'login' => (int) env('RATE_LIMIT_LOGIN', 10),
+    ],
+
 ];
