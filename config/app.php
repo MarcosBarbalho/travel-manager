@@ -101,7 +101,7 @@ return [
 
     'previous_keys' => [
         ...array_filter(
-            explode(',', env('APP_PREVIOUS_KEYS', ''))
+            explode(',', env('APP_PREVIOUS_KEYS', '')),
         ),
     ],
 
@@ -124,6 +124,7 @@ return [
     ],
 
     'rate_limit' => [
+        'default' => (int) env('RATE_LIMIT_DEFAULT', 60),
         'login' => (int) env('RATE_LIMIT_LOGIN', 10),
     ],
 
