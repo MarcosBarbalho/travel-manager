@@ -9,7 +9,9 @@ use Illuminate\Http\Resources\Json\JsonResource;
 
 class UserController
 {
-    public function __construct(private readonly Factory $auth) {}
+    public function __construct(private readonly Factory $auth)
+    {
+    }
 
     public function show(UserQuery $query): JsonResource
     {

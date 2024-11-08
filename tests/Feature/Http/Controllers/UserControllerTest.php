@@ -2,12 +2,7 @@
 
 namespace Tests\Feature\Http\Controllers\V1;
 
-use App\Actions\Tenants\CreateAndInitializeTenant;
-use App\Models\Tenant;
 use App\Models\User;
-use Database\Factories\ClassFactories\UserClassFactory;
-use Database\Factories\UserFactory;
-use Illuminate\Foundation\Testing\LazilyRefreshDatabase;
 use Illuminate\Support\Facades\Event;
 use Tests\ControllerTestCase;
 

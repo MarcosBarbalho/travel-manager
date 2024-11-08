@@ -2,12 +2,7 @@
 
 namespace Tests\Feature\Http\Controllers\V1;
 
-use App\Actions\Tenants\CreateAndInitializeTenant;
-use App\Models\Tenant;
 use App\Models\User;
-use Database\Factories\ClassFactories\UserClassFactory;
-use GuzzleHttp\Psr7\Stream;
-use Illuminate\Foundation\Testing\LazilyRefreshDatabase;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Str;
 use PHPUnit\Framework\Attributes\DataProvider;
@@ -55,7 +50,7 @@ class AuthenticationControllerTest extends ControllerTestCase
                 'params' => [
                     'email' => null,
                     'password' => null,
-                ]
+                ],
             ],
             [
                 'messages' => [
@@ -64,7 +59,7 @@ class AuthenticationControllerTest extends ControllerTestCase
                 'params' => [
                     'email' => Str::random(),
                     'password' => Str::random(),
-                ]
+                ],
             ],
         ];
     }
@@ -119,7 +114,7 @@ class AuthenticationControllerTest extends ControllerTestCase
                     'email' => null,
                     'password' => null,
                     'password_confirmation' => null,
-                ]
+                ],
             ],
             [
                 'messages' => [
@@ -135,7 +130,7 @@ class AuthenticationControllerTest extends ControllerTestCase
                     'email' => Str::random(),
                     'password' => Str::random(7),
                     'password_confirmation' => Str::random(7),
-                ]
+                ],
             ],
         ];
     }

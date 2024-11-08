@@ -2,9 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Actions\Authentication\Login;
-use App\Exceptions\Http\NotFoundException;
-use App\Http\Controllers\Controller;
 use App\Http\Requests\Authentication\LoginRequest;
 use App\Http\Requests\Authentication\RegisterRequest;
 use App\Models\User;
@@ -17,7 +14,9 @@ use Symfony\Component\HttpFoundation\Response;
 
 class AuthenticationController extends Controller
 {
-    public function __construct(private readonly Factory $auth,public readonly User $user) {}
+    public function __construct(private readonly Factory $auth, public readonly User $user)
+    {
+    }
 
     public function login(LoginRequest $request): JsonResource|JsonResponse
     {
@@ -47,7 +46,7 @@ class AuthenticationController extends Controller
     public function register(RegisterRequest $request): JsonResource
     {
         return new JsonResource($this->authenticate(
-            $this->user->create($request->validated())
+            $this->user->create($request->validated()),
         ));
     }
 

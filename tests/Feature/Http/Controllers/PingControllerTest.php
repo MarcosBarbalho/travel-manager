@@ -2,7 +2,6 @@
 
 namespace Tests\Feature\Http\Controllers\V1;
 
-use Illuminate\Foundation\Testing\LazilyRefreshDatabase;
 use Illuminate\Support\Facades\Event;
 use Tests\ControllerTestCase;
 
