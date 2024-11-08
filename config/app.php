@@ -124,6 +124,7 @@ return [
     ],
 
     'rate_limit' => [
+        'default' => (int) env('RATE_LIMIT_DEFAULT', 60),
         'login' => (int) env('RATE_LIMIT_LOGIN', 10),
     ],
 
