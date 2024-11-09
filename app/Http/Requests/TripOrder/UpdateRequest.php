@@ -27,7 +27,6 @@ class UpdateRequest extends FormRequest
             ],
             'status' => [
                 'sometimes',
-                'nullable',
                 Rule::in([
                     Status::APPROVED->value,
                     Status::CANCELED->value,
