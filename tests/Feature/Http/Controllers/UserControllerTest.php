@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Feature\Http\Controllers\V1;
+namespace Tests\Feature\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Support\Facades\Event;

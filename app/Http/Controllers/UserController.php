@@ -7,7 +7,7 @@ use App\Http\Resources\UserResource;
 use Illuminate\Contracts\Auth\Factory;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class UserController
+class UserController extends Controller
 {
     public function __construct(private readonly Factory $auth)
     {

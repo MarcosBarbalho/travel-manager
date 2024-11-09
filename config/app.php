@@ -67,6 +67,10 @@ return [
 
     'timezone' => env('APP_TIMEZONE', 'UTC'),
 
+    'user_timezone' => env('APP_USER_TIMEZONE', 'America/Sao_Paulo'),
+
+    'schedule_timezone' => env('APP_SCHEDULE_TIMEZONE', 'America/Sao_Paulo'),
+
     /*
     |--------------------------------------------------------------------------
     | Application Locale Configuration
@@ -127,5 +131,7 @@ return [
         'default' => (int) env('RATE_LIMIT_DEFAULT', 60),
         'login' => (int) env('RATE_LIMIT_LOGIN', 10),
     ],
+
+    'pagination_limit' => (int) env('APP_DEFAULT_PAGE_SIZE', 25),
 
 ];

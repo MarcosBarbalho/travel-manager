@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class PingController
+class PingController extends Controller
 {
     public function show(): JsonResource
     {

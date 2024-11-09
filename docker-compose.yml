@@ -12,7 +12,6 @@ services:
       dockerfile: .dockerfiles/php/Dockerfile
       pull: true
     container_name: api
-    command: sh -c "chown -R www-data:www-data /var/www/storage && php-fpm"
     tty: true
     ports:
       - 9000:9000
