@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Tymon\JWTAuth\Contracts\JWTSubject;
@@ -32,6 +33,11 @@ class User extends Authenticatable implements JWTSubject
             'password' => 'hashed',
             'updated_at' => 'timestamp',
         ];
+    }
+
+    public function tripOrders(): HasMany
+    {
+        return $this->hasMany(TripOrder::class);
     }
 
     public function getJWTIdentifier()
